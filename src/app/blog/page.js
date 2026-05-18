@@ -17,6 +17,61 @@ function FadeIn({ children, delay = 0, className = "" }) {
 }
 
 const posts = [
+{
+  slug: "kedarnath-opening-day-22km-truth",
+  title: "Kedarnath — The 22km Truth Nobody Tells You",
+  date: "April 2025",
+  category: "Trip Story",
+  image: "/photos/kedarnath.jpg",
+  readTime: "7 min read",
+  tags: ["Kedarnath", "Trek", "Spiritual", "Mahadev"],
+  excerpt: "Everyone says the trek is 14km. Some say 18km. It's actually 22km one side. We left Delhi on April 21st, reached the opening day darshan on April 22nd. Here's what nobody tells you before you go — and why the moment you see that temple from a distance, everything you went through becomes worth it.",
+  content: `We left Delhi on April 21st. Four of us in the car. None of us had done Kedarnath before. We had read everything we could find online — different blogs said different things. Some said 14km. Some said 18km. The Wikipedia page says something else entirely.
+
+It is 22km. One side. Remember that number.
+
+The drive to Gaurikund takes you through the Garhwal Himalayas — Haridwar, Rishikesh, Devprayag where the Alaknanda meets the Bhagirathi, Rudraprayag where the Mandakini joins. Every town a confluence. Every confluence a temple. The valley gets narrower and the river gets louder as you go deeper in.
+
+We reached Gaurikund by evening. The base camp is a busy little town — dhabas, shops selling trekking gear at inflated prices, pilgrims preparing, guides offering themselves. We ate a full dinner. Our last proper meal for 24 hours.
+
+5am. Trek begins.
+
+The first 8 km to Rambhara are gradual — forested path, the Mandakini river below, mist everywhere. You feel good. Strong. Ahead of the curve. 
+
+Then Rambhara. And after Rambhara, the mountain shows you what it actually is.
+
+The incline after Rambhara is relentless. The path goes up and stays up. Stone steps cut into the Himalaya, thousands of feet above the valley floor. There are shops all along the way — chai, maggi, snacks. But everything is expensive at altitude. We had carried fruits, nuts, chocolate from the base. Smart decision. There are natural springs and small waterfalls along the route — the water is clean and cold and perfect. Fill your bottles there. Don't buy water.
+
+About the horses. You will see them everywhere. Ponies carrying pilgrims up and down, loaded with weight, working the route in both directions all day. People say taking a horse is the easy option. I will tell you what actually happens: your hips hurt from the saddle, your lower back seizes up from the angle, and your hands ache from gripping. And you will feel every jolt of the animal's steps through your entire body. More importantly — these animals have no choice. They work this route every day of the season without rest. If your body can carry you up, carry yourself.
+
+We trekked. Eight hours.
+
+And then.
+
+You come around a turn in the path and suddenly — there it is. Far ahead, perched against the Garhwal peaks, small from a distance but unmistakeable — the ancient stone of the Kedarnath temple.
+
+I don't know how to explain what happens in that moment. Something shifts. The ache in your legs is still there. Your back still hurts. Your breath is still short at 3553 metres. But something settles. A quiet that isn't silence — the wind is blowing, pilgrims are moving around you — but internally, a stillness.
+
+We reached the temple by afternoon. April 22nd was the opening day of the season. The priests light the temple for the first time, the doors open, the rituals begin after months of the shrine being closed through winter.
+
+We joined the queue. Waited. Moved forward slowly.
+
+And when you finally stand in front of the Kedarnath temple — the ancient black stone, the mountains on three sides, the cold wind coming off the glacier directly onto your face — something strange happens. The crowd seems to disappear. The noise disappears. There are hundreds of people around you but in that moment it feels like it's just you, Mahadev, the valleys, and the wind.
+
+I'm not a religious person in any conventional sense. But standing there, having walked 22km to get to that place, I understood why people have been making this journey for a thousand years.
+
+*What you need to know before you go:*
+
+The trek is 22km one side. Real incline starts after Rambhara. Budget the full day for the climb — don't try to rush it.
+
+Hotels at the top cost ₹7000+ per night for private accommodation. Food, water, everything is expensive at altitude. Book through the official government portal — rates are controlled and much more reasonable.
+
+Carry fruits, nuts, chocolate from the base. Fill water from the natural springs on the route. Walk if your body allows it.
+
+Opening day darshan in late April  is extraordinary. Fewer crowds than peak season. The valley still has snow. The priests are performing rituals for the first time that year. Plan early — accommodation books out weeks in advance.
+
+We drove back on April 24th. Delhi by night. Four people who had said very little to each other on the drive back — not because anything was wrong, but because some things sit in you quietly for a while before they need words.`
+},
   {
     slug: "tirthan-valley-where-it-all-began",
     title: "Tirthan Valley — Where It All Began",

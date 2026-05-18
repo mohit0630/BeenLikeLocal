@@ -19,6 +19,7 @@ Available destinations:
 - Barot Valley: 3 days, ₹6000, Relax, hidden Himachal, trout fishing, Rajgundha trek
 - Jaisalmer: 3 days, ₹6500, Relax, golden city, desert safari, sand dunes
 - Dharamshala: 3 days, ₹6500, Relax, Tibetan culture, McLeodganj, Triund trek
+- Kedarnath: 4 days, ₹9000, Explore, sacred Himalayan town, ancient temple, spiritual trek
 
 Rules:
 - Recommend 1-2 best matching destinations based on budget, days, and vibe

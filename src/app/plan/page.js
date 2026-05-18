@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { motion, useInView, AnimatePresence } from "framer-motion";
+import RoutePlanner from "@/components/RoutePlanner";
 
 function Navbar() {
   return (
@@ -41,7 +42,7 @@ function FadeIn({ children, delay = 0, className = "" }) {
 const destinations = [
   "Spiti Valley", "Ladakh", "Zanskar", "Kasol", "Chakrata",
   "Manali", "Jispa", "Jibhi", "Udaipur", "Rishikesh",
-  "Banswara", "Barot Valley", "Jaisalmer", "Dharamshala",
+  "Banswara", "Barot Valley", "Jaisalmer", "Dharamshala","Kedarnath",
 ];
 
 // ─── BUDGET CALCULATOR ────────────────────────────────────────────────────────
@@ -124,7 +125,6 @@ Keep numbers realistic for India travel. [/INST]`;
       </div>
 
       <div className="grid md:grid-cols-2 gap-4 mb-6">
-        {/* Destination */}
         <div>
           <label className="block text-xs opacity-50 uppercase tracking-widest mb-2">Destination</label>
           <select
@@ -138,7 +138,6 @@ Keep numbers realistic for India travel. [/INST]`;
           </select>
         </div>
 
-        {/* People */}
         <div>
           <label className="block text-xs opacity-50 uppercase tracking-widest mb-2">Number of People</label>
           <select
@@ -152,7 +151,6 @@ Keep numbers realistic for India travel. [/INST]`;
           </select>
         </div>
 
-        {/* Days */}
         <div>
           <label className="block text-xs opacity-50 uppercase tracking-widest mb-2">Duration</label>
           <select
@@ -166,7 +164,6 @@ Keep numbers realistic for India travel. [/INST]`;
           </select>
         </div>
 
-        {/* Stay */}
         <div>
           <label className="block text-xs opacity-50 uppercase tracking-widest mb-2">Stay Type</label>
           <select
@@ -180,7 +177,6 @@ Keep numbers realistic for India travel. [/INST]`;
           </select>
         </div>
 
-        {/* Transport */}
         <div className="md:col-span-2">
           <label className="block text-xs opacity-50 uppercase tracking-widest mb-2">Transport Mode</label>
           <div className="grid grid-cols-3 gap-3">
@@ -216,7 +212,6 @@ Keep numbers realistic for India travel. [/INST]`;
         {loading ? "Calculating..." : "Calculate Budget →"}
       </motion.button>
 
-      {/* Result */}
       <AnimatePresence>
         {loading && (
           <motion.div
@@ -453,11 +448,13 @@ export default function PlanTrip() {
           transition={{ delay: 0.4 }}
           className="max-w-lg mx-auto text-sm leading-relaxed"
         >
-          Get AI-powered budget estimates and timing advice — so you can plan smarter before you book.
+          Budget estimates, timing advice, and route planning — everything you need before you book.
         </motion.p>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 pb-24">
+      <section className="max-w-6xl mx-auto px-6 pb-24 space-y-8">
+
+        {/* Row 1 — Budget + Best Time */}
         <div className="grid md:grid-cols-2 gap-8">
           <FadeIn delay={0}>
             <BudgetCalculator />
@@ -467,9 +464,14 @@ export default function PlanTrip() {
           </FadeIn>
         </div>
 
+        {/* Row 2 — Route Planner (full width) */}
+        <FadeIn delay={0.1} id="route-planner">
+          <RoutePlanner />
+        </FadeIn>
+
         {/* CTA */}
-        <FadeIn delay={0.2} className="mt-16 text-center">
-          <p className="opacity-40 text-sm mb-6">Ready to book?</p>
+        <FadeIn delay={0.2} className="mt-8 text-center">
+          <p className="opacity-40 text-sm mb-6">Ready to go?</p>
           <div className="flex gap-4 justify-center flex-wrap">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
               <Link

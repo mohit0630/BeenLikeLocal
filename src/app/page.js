@@ -80,6 +80,7 @@ const destinations = [
   { slug: "barot-valley", label: "Barot Valley",   type: "relax"   },
   { slug: "jaisalmer",    label: "Jaisalmer",      type: "relax"   },
   { slug: "dharamshala",  label: "Dharamshala",    type: "relax"   },
+  { slug: "kedarnath",    label: "Kedarnath",      type: "explore" },
 ];
 
 export default function Home() {

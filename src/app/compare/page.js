@@ -144,6 +144,16 @@ const destinations = {
     avoid: "Casual travelers, anyone without mountain experience",
     highlight: "Phugtal Monastery, Chadar Trek Route, Padum",
   },
+  kedarnath: {
+    name: "Kedarnath", image: "/photos/kedarnath.jpg", slug: "kedarnath",
+    price: 9000, days: "4", type: "Adventure",
+    altitude: "3553m", bestTime: "May-Jun, Sep-Oct",
+    difficulty: 8, crowd: 7, internet: 2, atm: 2, roads: 5,
+    tags: ["Spiritual", "Trek", "Jyotirlinga", "High Altitude"],
+    idealFor: ["Pilgrims", "Trekkers", "Spiritual Seekers"],
+    avoid: "People with knee/back issues, anyone afraid of long treks",
+    highlight: "Kedarnath Temple, 22km Trek, Opening Day Darshan",
+  },
 };
 
 const destList = Object.values(destinations);

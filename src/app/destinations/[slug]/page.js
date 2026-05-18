@@ -1048,6 +1048,53 @@ const trips = {
       "Camping by the Bhaga river is the highlight — book a riverside camp",
     ],
   },
+  kedarnath: {
+    name: "Kedarnath",
+    image: "/photos/kedarnath.jpg",
+    days: "4 Days",
+    price: 9000,
+    type: "explore",
+    tagline: "Where Everything Disappears Except You and Mahadev",
+    about: "Kedarnath is one of the twelve Jyotirlingas and one of the holiest shrines in India, sitting at 3553m in the Garhwal Himalayas. The trek is 22km one way — not 14km, not 18km as most people say. The moment you first see the temple from a distance, something shifts inside you. When you finally stand in front of it — the crowd disappears, the noise disappears, and it's just you, Mahadev, the valleys, and cold mountain wind on your face.",
+    difficulty: { fitness: 8, roads: 5, altitude: 7, budget: 4, overall: "Hard Trek ⚠️" },
+    food: [
+      { name: "Rambhara Dhabas", emoji: "🍵", desc: "Last affordable food on the trek. Chai and maggi. Eat here before the real incline begins — this is your last proper stop." },
+      { name: "Govt Canteen, Kedarnath", emoji: "🍽️", desc: "The most affordable food at the top. If you're watching your budget, this is the place. Private stalls charge 3x." },
+      { name: "Trek Stalls (carry your own)", emoji: "🍫", desc: "Stalls exist all along the route but are very expensive. Carry fruits, nuts, and chocolate from base — it's lighter and cheaper." },
+      { name: "Gaurikund Dhabas", emoji: "☕", desc: "Base camp town. Have a proper heavy meal here the night before — your last comfortable food before the climb." },
+    ],
+    sunriseSunset: [
+      { type: "🌅 Sunrise", name: "Kedarnath Temple", desc: "First light hitting the ancient stone temple with snow peaks behind and mist rising from the valley — nothing in India compares." },
+      { type: "🌄 Sunset", name: "Rambhara Ridge", desc: "Looking back down the Mandakini Valley at golden hour — you realize how far you've come and how small everything is." },
+    ],
+    places: [
+      { name: "Kedarnath Temple", emoji: "🛕", desc: "One of the twelve Jyotirlingas. An 8th century stone temple that has survived Himalayan winters for over 1200 years. Standing in front of it is unlike anything else." },
+      { name: "Rambhara", emoji: "🏔️", desc: "The 8km mark from Gaurikund. After here, the real incline begins. A critical mental checkpoint on the trek." },
+      { name: "Gaurikund", emoji: "🌊", desc: "Trek base at 1982m. Natural hot spring used by pilgrims. Start your trek from here — shared jeeps from Sonprayag." },
+      { name: "Bhairav Temple", emoji: "⛪", desc: "A short climb above Kedarnath. Panoramic views of the valley and the glacier. Almost no one goes — completely peaceful." },
+    ],
+    offbeat: [
+      { name: "Gandhi Sarovar (Chorabari Lake)", emoji: "🏞️", desc: "3km above Kedarnath at 3900m — glacial lake where Gandhi's ashes were immersed. Barely anyone makes it up here." },
+      { name: "Opening Day Darshan", emoji: "🎯", desc: "Temple opens in late April or early May. The opening day is extraordinary — fewer crowds, raw energy, the priests light the temple for the first time that season." },
+      { name: "Vasuki Tal Trek", emoji: "🏔️", desc: "6km above Kedarnath at 4135m. Panoramic Himalayan views. Only for serious trekkers with a rest day to spare." },
+    ],
+    itinerary: [
+      { day: "Day 1", place: "Delhi → Gaurikund", points: ["Leave Delhi by night or very early morning", "Drive via Haridwar, Rishikesh, Devprayag, Rudraprayag — beautiful river valley route", "Reach Sonprayag by evening, shared jeep to Gaurikund (30 mins)", "Eat a full heavy dinner — your last comfortable meal before the trek", "Sleep early — 4am wake up next morning"] },
+      { day: "Day 2", place: "The 22km Trek — Gaurikund → Kedarnath", points: ["Start by 5am — early start is essential, avoid afternoon heat and crowds", "First 3km to Rambhara is gradual — deceptively manageable", "After Rambhara — real incline starts. Budget 4-5 hours for this section", "Fill water from natural springs and waterfalls on the route — they are clean and free", "Trek stalls exist but charge very high — carry fruits, nuts, chocolate from base", "First view of the temple from a distance: an inexplicable peace settles in", "Reach Kedarnath by early afternoon (total: 8-10 hours of trekking)"] },
+      { day: "Day 3", place: "Kedarnath Darshan", points: ["Wake up by 4:30am for early morning darshan — queues build fast", "Standing in front of the temple: the crowd seems to disappear, just you and Mahadev", "Bhairav Temple hike after darshan — panoramic glacier view", "Gandhi Sarovar if you have energy (3km up, very few people)", "Rest and acclimatize at 3553m — do not overexert", "Book via govt Char Dham portal — private camps cost ₹7000+/night"] },
+      { day: "Day 4", place: "Trek Down → Drive Back to Delhi", points: ["Start descent by 6am — easier on legs but knees feel it more going down", "Stop at Rambhara for chai on the way down — you've earned it", "Reach Gaurikund by noon", "Shared jeep to Sonprayag, then drive towards Delhi", "Haridwar or Rishikesh overnight if too tired to drive straight through"] },
+    ],
+    tips: [
+      "Trek is 22km one side — not 14km or 18km as people say. Plan your energy accordingly",
+      "The real incline only starts after Rambhara — the first 8km will feel easy, don't burn out",
+      "Book accommodation via the official Char Government portal — private rooms are ₹7000+/night at top",
+      "Avoid horses — they are overworked and poorly cared for. Hips, lower back, and hands will ache from riding. Walk if you can",
+      "Fill water from natural springs on the route — completely clean, completely free",
+      "Carry fruits, nuts, and chocolate from base — stalls on trek charge very high prices",
+      "Helicopter available from Phata/Sitapur — book weeks in advance, it fills up fast",
+      "Opening day darshan (late April) is special — requires early planning but worth every bit of it",
+    ],  
+  },
 };
 
 // ─── MAIN PAGE ────────────────────────────────────────────────────────────────
