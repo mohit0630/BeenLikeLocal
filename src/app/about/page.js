@@ -25,7 +25,15 @@ const trips = [
   { year: "2024", month: "November",         place: "Manali (Car Trip)",           emoji: "🚗", upcoming: false, desc: "Same mountains, completely different vibe. First snow of the season. Came back with 400+ photos." },
   { year: "2024", month: "November",         place: "Rishikesh",                   emoji: "🌊", upcoming: false, desc: "Ganga aarti at dusk, riverside camps, and the best maggi of my life at a dhaba near Lakshman Jhula." },
   { year: "2025", month: "June",             place: "McLeodganj",                  emoji: "🏔️", upcoming: false, desc: "Tibetan culture meets Indian mountains. Triund at golden hour. Momos that ruined all other momos forever." },
-  { year: "2025", month: "September",        place: "Barot Valley",                emoji: "🎯", upcoming: true,  desc: "Next mission. Himachal's best kept secret — a valley most people drive past without stopping." },
+  { year: "2025", month: "September",        place: "Barot Valley",                emoji: "🎯", upcoming: false,  desc: "Next mission. Himachal's best kept secret — a valley most people drive past without stopping." },
+  { 
+  year: "2026", 
+  month: "April", 
+  place: "Kedarnath", 
+  emoji: "🛕", 
+  upcoming: false, 
+  desc: "Opening day darshan on April 22nd. 22km trek one side — not 14, not 18 as everyone says. When you first see the temple from a distance, something shifts inside you." 
+},
 ];
 
 export default function About() {

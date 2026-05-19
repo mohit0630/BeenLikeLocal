@@ -2,6 +2,16 @@ export async function POST(req) {
   try {
     const body = await req.json();
 
+    let messages;
+
+    if (body.messages) {
+      // NEW: conversation array format — from TripRecommender (has memory)
+      messages = body.messages;
+    } else {
+      // OLD: single string prompt — from BudgetCalculator, BestTimeSuggester, etc.
+      messages = [{ role: "user", content: body.inputs }];
+    }
+
     const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -12,12 +22,7 @@ export async function POST(req) {
         model: "llama-3.1-8b-instant",
         max_tokens: 300,
         temperature: 0.7,
-        messages: [
-          {
-            role: "user",
-            content: body.inputs,
-          },
-        ],
+        messages,
       }),
     });
 

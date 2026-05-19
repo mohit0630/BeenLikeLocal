@@ -1,8 +1,7 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 
-const destinationsContext = `
-You are a friendly travel assistant for "Been Like Local" — an authentic Indian travel platform.
+const SYSTEM_PROMPT = `You are a friendly travel assistant for "Been Like Local" — an authentic Indian travel platform.
 
 Available destinations:
 - Spiti Valley: 8 days, ₹18000, Adventure, high altitude desert, monasteries, remote Himalayas
@@ -19,15 +18,15 @@ Available destinations:
 - Barot Valley: 3 days, ₹6000, Relax, hidden Himachal, trout fishing, Rajgundha trek
 - Jaisalmer: 3 days, ₹6500, Relax, golden city, desert safari, sand dunes
 - Dharamshala: 3 days, ₹6500, Relax, Tibetan culture, McLeodganj, Triund trek
-- Kedarnath: 4 days, ₹9000, Explore, sacred Himalayan town, ancient temple, spiritual trek
+- Kedarnath: 4 days, ₹9000, Adventure/Spiritual, Jyotirlinga trek 22km one side, Garhwal Himalayas, opening day April
 
 Rules:
+- Remember the full conversation — if the user asks a follow-up about a destination already mentioned, answer in that context
 - Recommend 1-2 best matching destinations based on budget, days, and vibe
 - Always mention destination name, price, duration and why it matches
 - Be friendly, warm and concise
-- Keep response under 100 words
-- End with "Want more details? Just ask! 😊"
-`;
+- Keep response under 120 words
+- End with "Want more details? Just ask! 😊"`;
 
 const QUICK_PROMPTS = [
   "Budget ₹8000, 4 days, adventure",
@@ -59,16 +58,26 @@ export default function TripRecommender() {
     if (!userText || loading) return;
 
     setInput("");
-    setMessages((prev) => [...prev, { role: "user", text: userText }]);
+
+    // Add user message to state
+    const updatedMessages = [...messages, { role: "user", text: userText }];
+    setMessages(updatedMessages);
     setLoading(true);
 
     try {
-      const prompt = `${destinationsContext}\n\nUser: ${userText}\n\nAssistant:`;
+      // Build full conversation history for the API — this gives the AI memory
+      const apiMessages = [
+        { role: "system", content: SYSTEM_PROMPT },
+        ...updatedMessages.map((msg) => ({
+          role: msg.role === "user" ? "user" : "assistant",
+          content: msg.text,
+        })),
+      ];
 
       const response = await fetch("/api/trip-ai", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ inputs: prompt }),
+        body: JSON.stringify({ messages: apiMessages }),
       });
 
       const data = await response.json();
@@ -80,7 +89,7 @@ export default function TripRecommender() {
       } else if (data?.generated_text) {
         reply = data.generated_text.trim();
       } else if (data?.error) {
-        reply = `Sorry, something went wrong: ${data.error}`;
+        reply = "Sorry, something went wrong. Please try again!";
       } else {
         reply = "Sorry, I couldn't get a response. Please try again!";
       }
