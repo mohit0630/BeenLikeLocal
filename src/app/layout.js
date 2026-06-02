@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "Been Like Local — Travel Beyond the Obvious",
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning className="bg-black text-white antialiased">
         <Navbar />
         {children}
+        <Analytics />
       </body>
     </html>
   );
